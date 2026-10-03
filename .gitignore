@@ -1,0 +1,8 @@
+# Ignore C++ build/object output
+*.o
+*.so
+*.a
+
+# Ignore hidden system files
+.DS_Store
+.vscode/
