@@ -16,14 +16,14 @@ target_compile_features(my_publisher_node PUBLIC c_std_99 cxx_std_17)
 ament_target_dependencies(my_publisher_node rclcpp std_msgs)
 
 # 3. Subscriber Target
-add_executable(listener src/my_subscriber_node.cpp)
-target_compile_features(listener PUBLIC c_std_99 cxx_std_17)
-ament_target_dependencies(listener rclcpp std_msgs)
+add_executable(my_subscriber_node src/my_subscriber_node.cpp)
+target_compile_features(my_subscriber_node PUBLIC c_std_99 cxx_std_17)
+ament_target_dependencies(my_subscriber_node rclcpp std_msgs)
 
 # 4. Install executables so 'ros2 run' can find them
 install(TARGETS
   my_publisher_node
-  listener
+  my_subscriber_node
   DESTINATION lib/${PROJECT_NAME})
 
 # 5. Testing (Optional)
